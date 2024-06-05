@@ -5,11 +5,13 @@ export default function JobDetail({
   title,
   time,
   postedBy,
+  url
 }: {
   id: number;
   title: string;
   time: number;
   postedBy: string;
+  url?: string;
 }) {
   const date = new Date(time * 1000);
 
@@ -26,7 +28,7 @@ export default function JobDetail({
 
   return (
     <div>
-      <p>ID: {id}</p>
+      <p>ID: <a href={url} target={'_blank'}>{id}</a></p>
       <h2>{title}</h2>
       <p>{formattedDate}</p>
       <p>Posted by: {postedBy}</p>

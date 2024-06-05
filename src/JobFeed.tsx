@@ -67,6 +67,7 @@ const JobFeed = () => {
                 title={job.title}
                 time={job.time}
                 postedBy={job.by}
+                url={job.url}
               />
             </div>
           ))}
